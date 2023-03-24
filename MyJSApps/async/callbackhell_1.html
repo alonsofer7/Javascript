@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Callback Example</title>
+  </head>
+  <body>
+    <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      function downloadPhoto(url, callback){
+        let randNum = Math.floor(Math.random() * 7000) + 1000;
+        setTimeout(() => {callback(url)}, randNum);
+        console.log(url);
+      }
+
+
+
+      function handlePhoto(url){
+        console.log(`Photo downloaded: ${url}`);
+      }
+
+
+      downloadPhoto("http://mo.com/mo.jpg", handlePhoto);
+      downloadPhoto("http://mo2.com/mo2.jpg", handlePhoto);
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
